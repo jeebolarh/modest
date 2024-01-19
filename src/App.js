@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import shoess from "./Component/Shoes/RED.png"
+import Navbar from "./Component/Navbar";
 function App() {
+  const shoes = [
+    {
+      name: "Nike Emporium",
+      size: 34,
+      color: ["red", "blue", "black"],
+      img: require("./Component/Shoes/RED.png").default
+    }]
+  const shoeList = shoes.map((shoe, key) => 
+    <img key={key} src={shoe.img} alt=""/>
+  )
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
     </div>
   );
 }

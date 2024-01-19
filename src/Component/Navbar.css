@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.links ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+}
+.links ul li{
+    margin-left: 3rem;
+    list-style: none;
+}
+.links ul li a {
+    text-decoration: none;
+    color: Black;
+    font-weight: 500;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.search{
+    padding: 5px;
+    width: 200px;
+    outline: none;
+}
