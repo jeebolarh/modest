@@ -1,5 +1,6 @@
 import shoess from "./Component/Shoes/RED.png"
 import Navbar from "./Component/Navbar";
+import Section from "./Component/Section"
 function App() {
   const shoes = [
     {
@@ -13,7 +14,8 @@ function App() {
   )
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
+      <Section/>
     </div>
   );
 }
