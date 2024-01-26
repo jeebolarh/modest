@@ -1,0 +1,10 @@
+            {!togggled ?<button className='sec-button button' onClick={() => { addToCart(shoe) }}>Add to Cart</button>:  <button>Added</button>}
+<div onClick={() => toggleButton(shoe.name)}>
+  {!shoeToggled[shoe.name] ? (
+    <button className='sec-button button' onClick={() => addToCart(shoe)}>
+      Add to Cart
+    </button>
+  ) : (
+    <button>Added</button>
+  )}
+</div>
