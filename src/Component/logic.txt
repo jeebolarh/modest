@@ -8,3 +8,51 @@
     <button>Added</button>
   )}
 </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Section/>}>
+          </Route>
+          <Route path="/Cart" element={<Cart cartItems={cartItems} />}></Route>
+        </Routes>
+        <Shoes addToCart={addToCart}/>
+      </div>
+    </Router>
+      <div className="App">
+        <Navbar />
+        <Section/>
+        <Shoes addToCart={addToCart}/>
+        <Cart cartItems={cartItems} />
+      </div>
+
+<Router>
+  <div className="App">
+    {/* Navbar component */}
+    <Navbar />
+    
+    {/* Shoes component with addToCart function */}
+    <Shoes addToCart={addToCart}/>
+
+    {/* Routes for different pages */}
+    <Routes>
+      {/* Default route, renders Section component when the path is '/' */}
+      <Route path="/" element={<Section />} />
+      
+      {/* Route for the Cart page, renders Cart component with cartItems */}
+      <Route path="/Cart" element={<Cart cartItems={cartItems} />} />
+    </Routes>
+  </div>
+</Router>
+
+<Router>
+  <div className="App">
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Section />} />
+          <Route path="/Cart" element={<Cart cartItems={cartItems} />} />
+        </Routes>
+        <Shoes addToCart={addToCart}/>
+  </div>
+</Router>
+
