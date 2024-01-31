@@ -15,6 +15,7 @@ const Shoes = ({addToCart}) => {
       color: ["red", "blue", "black"],
       img: shoess ,
       price: 340,
+      id: 1,
       text: "specialitem",
       description: "Nike Emporium 10s for outdoor sporting events, Red , Super-comfy"
       
@@ -25,6 +26,7 @@ const Shoes = ({addToCart}) => {
       color: ["red", "blue", "black"],
       img:  street ,
       price: 230,
+      id:2,
       text: "specialitem",
       description: "Nike Mountaineers, Hiking the modern way; Ash, Ultra rigged "
     },
