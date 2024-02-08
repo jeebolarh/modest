@@ -86,3 +86,31 @@
 .sec-button:active {
     filter: brightness(.8);
 }
+#bottomElement{
+    height: 100px;
+}
+@media (max-width:769px) {
+    .svg{
+        bottom: 17%;
+    }
+    .section-flex{
+        display: block;
+    }
+    .sec-text{
+        margin-top: -4rem;
+    }
+    .section-img img{
+        width: 400px;
+        height: 300px;
+    }
+    .sec-header{
+        font-size: 1.5rem;
+    }
+    .sec-button{
+        padding: 0.6em 1.5em;
+    }
+    .sec-container{
+        height: 70vh;
+    }
+    
+}

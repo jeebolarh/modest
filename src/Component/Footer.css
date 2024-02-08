@@ -1,0 +1,40 @@
+.footer{
+    background: #2d2d2d;
+    height: 200px;
+    margin-bottom: 0;
+    color: #ededed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-text{
+    width: 100%;
+}
+.footer p{
+    padding: 1rem;
+    font-weight: 100;
+    color: silver;
+    padding-left: 4rem;
+    width: 70%;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+}
+.footer h2{
+    padding-left: 4rem;
+    margin-bottom: -1rem;
+    padding-top: 1rem;
+}
+.contact{
+    text-align: center;
+}
+.contact h2{
+    margin-bottom: 0.8rem;
+    text-align: left;
+    margin-left: 6rem;
+}
+.contact li{
+    list-style: none;
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+    color: silver;
+}

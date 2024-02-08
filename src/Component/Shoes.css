@@ -4,6 +4,7 @@
 .shoe-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
 }
 .image{
     width: 300px;
@@ -36,7 +37,6 @@
     text-align: center;
 }
 .shoe-flex{
-    margin-left: 3rem;
     margin-top: 3rem;
 }
 .shoe-bottom-text h3{
@@ -88,4 +88,39 @@
     padding-left: 1rem;
     padding-right: 1rem;
     line-height: 1.5;
+}
+@media (max-width:769px) {
+    .shoe-wrapper{
+        display: flex;
+        animation: scroll 15s linear infinite;
+        width: calc(100% * 6);
+    }
+    .shoe{
+        margin-top: -7rem;
+    }
+    .shoe-content{
+        flex: 0 0 auto;
+        margin-right: 2rem;
+        width: 300px;
+        height: 450px;
+    }
+    .shoe-flex{
+        overflow: hidden;
+        width: 100%;
+    }
+    .shoe-bottom-text p{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .shoe-bottom-text{
+        height: 250px;
+    }
+    @keyframes scroll {
+       0%{
+        transform: translateX(0);
+       } 
+       100%{
+        transform: translateX(-100%);
+       }
+    }
 }

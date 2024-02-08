@@ -16,6 +16,13 @@ const initialCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     return updatedCart;
   });
 };
+ const getTotalItems = () => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
+ };
+    const totalPrice = cartItems.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0).toFixed(2);
+
 
 const updateCartItemQuantity = (productName, newQuantity) => {
   setCartItems(prevCartItems => {
@@ -64,12 +71,12 @@ useEffect(() => {
       {/* Default route, renders Section component when the path is '/' */}
       <Route
         path="/"
-        element={<Section addToCart={addToCart}/>}
+            element={<Section addToCart={addToCart} getTotalItems={getTotalItems } />}
       />
       {/* Route for the Cart page, renders Cart component with cartItems */}
       <Route
         path="/Cart"
-            element={<Cart cartItems={cartItems} getItemQuantityInCart={getItemQuantityInCart} handleIncrement={updateCartItemQuantity} removeItemFromCart={removeItemFromCart } />}
+            element={<Cart cartItems={cartItems} getItemQuantityInCart={getItemQuantityInCart} handleIncrement={updateCartItemQuantity} removeItemFromCart={removeItemFromCart } totalPrice={totalPrice} />}
       />
     </Routes>
 
