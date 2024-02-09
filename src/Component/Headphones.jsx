@@ -6,12 +6,32 @@ import fire from "./Headphones/fire.png"
 import water from "./Headphones/water.png"
 import synstr from "./Headphones/synstr.png"
 import "./Headphones.css"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 const Headphones = ({addToCart}) => {
 const toggleButton = (shoeName) => {
   setShoeToggled((prevState) => ({ ...prevState, [shoeName]: !prevState[shoeName] }));
 };
   const [shoeToggled, setShoeToggled] = useState({});
+  const [animationPaused, setAnimationPaused] = useState(false);
+
+    useEffect(() => {
+        let scrollTimeout;
+
+        const handleScroll = () => {
+            clearTimeout(scrollTimeout);
+            setAnimationPaused(true);
+
+            scrollTimeout = setTimeout(() => {
+                setAnimationPaused(false);
+            }, 500); // Adjust the delay according to your preference
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
   const headphones =[
     {
@@ -94,8 +114,8 @@ const toggleButton = (shoeName) => {
   return (
     <div className='shoes-container'>
       <h2 className="headphones">Headphones</h2>  
-      <div className="headphone-flex">
-        <div className='headphone-wrapper'>
+      <div className={`headphone-flex ${animationPaused ? 'paused' : ''}`}>
+        <div className='headphone-wrapper' style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
             {headphonesList}
         </div>
       </div>

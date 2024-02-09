@@ -96,8 +96,28 @@ const Shoes = ({addToCart}) => {
       text: "specialitem",
       description: "Nike Emporium 10s for outdoor sporting events, Red , Super-comfy"
     }
-]
-const toggleButton = (shoeName) => {
+  ]
+  const [animationPaused, setAnimationPaused] = useState(false);
+
+    useEffect(() => {
+        let scrollTimeout;
+
+        const handleScroll = () => {
+            clearTimeout(scrollTimeout);
+            setAnimationPaused(true);
+
+            scrollTimeout = setTimeout(() => {
+                setAnimationPaused(false);
+            }, 500); // Adjust the delay according to your preference
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+  const toggleButton = (shoeName) => {
   setShoeToggled((prevState) => ({ ...prevState, [shoeName]: !prevState[shoeName] }));
   };
   const [shoeToggled, setShoeToggled] = useState({});
@@ -137,8 +157,8 @@ useEffect(() => {
   return (
     <div className='shoes-container'>
       <h2 className="shoe">Shoes</h2>  
-      <div className="shoe-flex">
-        <div className='shoe-wrapper'>
+      <div className={`shoe-flex ${animationPaused ? 'paused' : ''}`}>
+        <div className='shoe-wrapper' style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
             {shoelist}
         </div>
       </div>

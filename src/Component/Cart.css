@@ -9,6 +9,9 @@
     margin-top: 2rem;
     
 }
+.shopping-cart{
+    margin-left: 3rem;
+}
 .control{
     display: flex !important;
     flex-direction: row !important;

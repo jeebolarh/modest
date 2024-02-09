@@ -38,3 +38,18 @@
     font-weight: 100;
     color: silver;
 }
+@media (max-width: 769px) {
+    .footer{
+        grid-template-columns: 1fr;
+        height: 540px;
+    }
+    .contact{
+        text-align: left;
+    }
+    .contact h2{
+        margin-left: 0rem;
+    }
+    .contact li{
+        margin-left: 1.5rem;
+    }
+}

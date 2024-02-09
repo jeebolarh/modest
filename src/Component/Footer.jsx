@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
       <div>
         <h2>JIBOLA</h2>
-        <p className='disclaimer'>This site exclusively belongs to Abiola Ajibola, Do not clone, Desinged by Ajibola Abiola</p>
+        <p className='disclaimer'>This site exclusively belongs to  &copy; Abiola Ajibola, Do not clone, Desinged by Ajibola Abiola</p>
       </div>
     </div>
   )

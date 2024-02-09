@@ -22,7 +22,7 @@ const Section = ({ addToCart, getTotalItems }) => {
       <Navbar getTotalItems={getTotalItems} />
       <div className='sec-container'>
         <div className="section-flex">
-          <div className="sec-text">
+          <div className="sec-text text-visible">
             <h2 style={props} className="sec-header">Welcome to CHEAPIFY</h2>
             <p className="sec-mini">Your one stop shop to everything fashion</p>
             <button className="sec-button" onClick={scrollToBottom}>Shop now</button>

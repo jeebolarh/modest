@@ -7,7 +7,7 @@ const Cart = ({ cartItems, getItemQuantityInCart, handleIncrement, removeItemFro
  
   return (
     <div className='shopping-cart-container'>
-      <h2>Shopping Cart</h2>
+      <h2 className="shopping-cart">Shopping Cart</h2>
               <div className="item-container">
 
       {cartItems.map((item, index) => (
