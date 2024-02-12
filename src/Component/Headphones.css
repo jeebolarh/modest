@@ -84,3 +84,31 @@
         }
     }
  }
+@media (min-width: 320px) and (max-width: 400px) and (min-height:520px) and (max-height: 750px) {
+    .headphone-image {
+        margin-top: 1rem;
+        height: 100px !important;
+        width: 200px !important;
+    }
+
+    .headphone-content {
+        height: 270px;
+        width: 200px;
+    }
+
+    .headpone-bottom-text {
+        height: 260px;
+    }
+
+    .headphone-bottom-text p {
+        font-size: 10px;
+        margin: 0;
+    }
+
+
+    .headphone-bottom-text .p {
+        margin-bottom: 0.5rem !important;
+        font-weight: 600;
+        font-size: 0.8rem
+    }
+}

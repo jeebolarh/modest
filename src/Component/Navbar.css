@@ -266,3 +266,20 @@
         left: 50%;
     }
 }
+@media (min-width: 320px) and (max-width: 350px) and (min-height:520px) and (max-width: 700px) {
+    .icon-menu{
+        margin-left: 0.5rem;
+    }
+    .circle{
+        right: 12% ;
+        top: 4%;
+    }
+    .line{
+        height: 80px;
+    }
+    .visible {
+        bottom: -15%;
+    }
+
+
+}

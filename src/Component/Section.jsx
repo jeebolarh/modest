@@ -31,9 +31,7 @@ const Section = ({ addToCart, getTotalItems }) => {
             <img src={backround1} alt="" />
           </div>
         </div>
-        <div className="svg">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#818181" fill-opacity="1" d="M0,256L1440,96L1440,320L0,320Z"></path></svg>
-        </div>
+        <div className="line"></div>
       </div>
       <Shoes addToCart={addToCart} />
       <Headphones addToCart={addToCart} />

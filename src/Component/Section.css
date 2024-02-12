@@ -1,5 +1,4 @@
 .sec-container{
-    height: 80vh;
     margin-top: 5rem;
     overflow: hidden;
     /* margin: 1rem; */
@@ -24,9 +23,6 @@
 } 
     100%{opacity: 1;}
 }
-.section-img{
-    margin-bottom: 2rem;
-}
 .sec-mini{
     font-weight: 600;
     letter-spacing: 1.5;
@@ -37,6 +33,12 @@
     bottom: 35%;
     margin: 0;
     
+}
+.line{
+    width: 100%;
+    height: 100px;
+    background-color: #818181;
+    margin-top: 0;
 }
 .sec-button {
     --color: #818181;
@@ -115,9 +117,21 @@
     }
     .sec-button{
         padding: 0.6em 1.5em;
+    }    
+}
+@media (min-width: 320px) and (max-width: 400px) and (min-height:520px) and (max-width: 700px) {
+    .svg{
+        width: 100%;
+        height: 300px;
+    }
+    .svg svg{
+        position: absolute;
+        height: 300px;
     }
     .sec-container{
-        height: 70vh;
+        height: auto;
     }
-    
+    .section-img{
+        margin-bottom: 0rem;
+    }
 }

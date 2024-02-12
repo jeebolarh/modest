@@ -95,7 +95,7 @@ const toggleButton = (shoeName) => {
       <div className='headphone-bottom-text'>
         <h3>{headphone.name}</h3>
         <p className='description'>{headphone.description}</p>
-        <p  className='p'>$ {headphone.price}</p>
+        <p className='p'>$ {headphone.price}</p>
         <div className='button-container'>
         <div onClick={() => toggleButton(headphone.name)}>
           {!shoeToggled[headphone.name] ? (
