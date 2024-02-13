@@ -100,4 +100,25 @@ const updateCartItemQuantity = (productName, newQuantity) => {
                 <div class="bar bar--2"></div>
                 <div class="bar bar--3"></div>
             </label></li>
+  const [animationPaused, setAnimationPaused] = useState(false);
+
+    useEffect(() => {
+        let scrollTimeout;
+
+        const handleScroll = () => {
+            clearTimeout(scrollTimeout);
+            setAnimationPaused(true);
+
+            scrollTimeout = setTimeout(() => {
+                setAnimationPaused(false);
+            }, 500); // Adjust the delay according to your preference
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 

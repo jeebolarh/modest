@@ -97,26 +97,29 @@ const Shoes = ({addToCart}) => {
       description: "Nike Emporium 10s for outdoor sporting events, Red , Super-comfy"
     }
   ]
-  const [animationPaused, setAnimationPaused] = useState(false);
+const [animationPaused, setAnimationPaused] = useState(false);
 
-    useEffect(() => {
-        let scrollTimeout;
+useEffect(() => {
+    let scrollTimeout;
 
-        const handleScroll = () => {
-            clearTimeout(scrollTimeout);
-            setAnimationPaused(true);
+    const handleScroll = () => {
+        setAnimationPaused(true);
 
-            scrollTimeout = setTimeout(() => {
-                setAnimationPaused(false);
-            }, 500); // Adjust the delay according to your preference
-        };
+        // Clear the timeout if it's already set
+        clearTimeout(scrollTimeout);
 
-        window.addEventListener('scroll', handleScroll);
+        // Set a timeout to detect when scrolling stops
+        scrollTimeout = setTimeout(() => {
+            setAnimationPaused(false);
+        }, 100); // Adjust the delay according to your preference
+    };
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
   const toggleButton = (shoeName) => {
   setShoeToggled((prevState) => ({ ...prevState, [shoeName]: !prevState[shoeName] }));
   };
