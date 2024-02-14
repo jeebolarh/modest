@@ -115,7 +115,7 @@ const toggleButton = (shoeName) => {
     <div className='shoes-container'>
       <h2 className="headphones">Headphones</h2>  
       <div className={`headphone-flex ${animationPaused ? 'paused' : ''}`}>
-        <div className='headphone-wrapper' style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
+        <div className='headphone-wrapper'>
             {headphonesList}
         </div>
       </div>

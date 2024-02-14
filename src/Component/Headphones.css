@@ -52,8 +52,8 @@
  @media (max-width: 769px) {
     .headphone-wrapper{
         display: flex;
-        animation: scroll 10s linear infinite;
-        width: calc(100% * 4);
+        overflow-x: scroll;
+        scroll-behavior: smooth;
     }
     .headphone-flex {
             overflow: hidden;

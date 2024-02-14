@@ -161,7 +161,7 @@ useEffect(() => {
     <div className='shoes-container'>
       <h2 className="shoe">Shoes</h2>  
       <div className={`shoe-flex ${animationPaused ? 'paused' : ''}`}>
-        <div className='shoe-wrapper' style={{ animationPlayState: animationPaused ? 'paused' : 'running' }}>
+        <div className='shoe-wrapper'>
             {shoelist}
         </div>
       </div>
